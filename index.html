@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+</head>
+<body>
+
+<div class="profile">
+    <nav>
+        <div class="nav-wrapper light-blue">
+            <a href="#!" class="brand-logo">Leo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">基本資料</a></li>
+                <li><a href="badges.html">專業技能</a></li>
+                <li><a href="collapsible.html">經歷</a></li>
+                <li><a href="mobile.html">作品</a></li>
+            </ul>
+            <!-- mobile -->
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="sass.html">基本資料</a></li>
+                <li><a href="badges.html">專業技能</a></li>
+                <li><a href="collapsible.html">經歷</a></li>
+                <li><a href="mobile.html">作品</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col s12 l8 offset-l2">
+            <div class="row">
+                <div class="col s12 l4 personal center">
+                    <img src="images/my-pic.jpg">
+                    <h4>基本資料</h4>
+                    <div class="hr-line"></div>
+                    <div class="wrapper">
+                        <span><strong>姓名: </strong>陳蘊暉</span>
+                        <span>
+                            <strong>電子郵件: </strong>
+                            <a href="mailto:dawnpioneer1989@gmail.com">dawnpioneer1989@gmail.com</a>
+                        </span>
+                        <span>
+                            <strong>網站: </strong>
+                            <a href="https://github.com/dawnpioneer/profile" target="_blank">
+                                website
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col s12 l8 introduce">
+                    <h3>陳蘊暉</h3>
+                    <div class="hr-line"></div>
+                    <p>
+                        哈囉！我是一個網站程式設計師，工作已經超過三年，最熟悉的技術為Java、Groovy、Javascript、Ember.js，
+                        也接觸過PHP、ASP.NET，資料庫則用過Oracle、MySQL、PostgreSQL、Redis，作業系統Windows、Linux(macOS)都很熟悉，
+                        也有Amazon Web Services的使用經驗。目前有著滿腔的熱情，希望能夠找到一個充滿活力的工作環境，一起成長努力！
+                        要是真的能夠期待星期一的到來那就更棒了：）
+                   </p>
+                    <ul class="collapsible popout" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">grade</i>持有證照</div>
+                            <div class="collapsible-body"><p>SCJP、乙級電腦硬體裝修技術士、丙級電腦硬體裝修技術士。</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">thumb_up</i>優點</div>
+                            <div class="collapsible-body"><p>充滿學習熱誠、誠實、責任感重、有毅力、平易近人、穩重。</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">thumb_down</i>缺點</div>
+                            <div class="collapsible-body"><p>耐性不太好、不喜常態性加班、有點宅、有點矮。</p></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">speaker_notes</i>備註</div>
+                            <div class="collapsible-body"><p>優、缺點為個人自以為，請酌量參考。</p></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 l8 offset-l2">
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+    $(".button-collapse").sideNav();
+</script>

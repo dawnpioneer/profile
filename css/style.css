@@ -1,7 +1,17 @@
 .profile .row {
-  padding-top: 30px; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
+.profile .row.sub {
+  background-color: #eee; }
 .profile .brand-logo {
   padding-left: 20px; }
+.profile .hr-line {
+  height: 3px;
+  width: 100px;
+  background: #333;
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative; }
 .profile .personal img {
   width: 200px;
   border-radius: 50%;
@@ -18,22 +28,165 @@
     display: block;
     margin-bottom: 5px;
     font-weight: 700; }
-.profile .hr-line {
-  height: 3px;
-  width: 135px;
-  background: #333;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: inline-block;
-  position: relative; }
 .profile .introduce p {
   color: #555;
-  font-weight: 300;
   margin: 0 auto; }
+.profile .introduce .collapsible {
+  margin-top: 30px; }
 @media (max-width: 992px) {
   .profile .introduce {
     text-align: center; } }
-.profile .collapsible {
-  margin-top: 30px; }
+.profile .skill p {
+  color: #525252;
+  font-size: 12px; }
+.profile .skill .skillbar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #b1dcfb;
+  height: 35px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -ms-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color; }
+.profile .skill .skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #ffffff;
+  background: #b1dcfb;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px; }
+.profile .skill .skillbar-title span {
+  display: block;
+  background-color: #0863dd;
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px; }
+.profile .skill .skillbar-bar {
+  height: 35px;
+  width: 0px;
+  background-color: #0863dd;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px; }
+.profile .skill .skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 11px;
+  height: 35px;
+  line-height: 35px;
+  color: #ffffff;
+  color: #0863dd; }
+.profile .experiences .timeline {
+  position: relative;
+  width: 100%;
+  padding-top: 40px;
+  margin-top: 40px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+.profile .experiences .timeline h4, .profile .experiences .timeline p {
+  color: #fff;
+  font-weight: 300; }
+.profile .experiences .timeline::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  width: 4px;
+  margin-left: -2px;
+  top: 0;
+  height: 100%;
+  background: #222;
+  border-radius: 2px; }
+.profile .experiences .timeline .timeline-block {
+  position: relative;
+  margin-bottom: 40px; }
+.profile .experiences .timeline .timeline-block .icon {
+  background: #222;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  border-radius: 50%; }
+.profile .experiences .timeline .timeline-block .icon i {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 50px; }
+.profile .experiences .timeline .timeline-block .content {
+  width: 44%;
+  border: 1px solid #222;
+  padding: 20px;
+  color: #222;
+  background: #222;
+  text-align: left; }
+.profile .experiences .timeline .timeline-block .content h4 {
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: inline-block; }
+.profile .experiences .timeline .timeline-block .content span.duration {
+  color: #b3b3b3;
+  display: inline-block;
+  margin: 5px; }
+.profile .experiences .timeline .timeline-block .content span.job-title {
+  font-size: 0.95em;
+  display: block;
+  color: #aaa;
+  text-transform: capitalize;
+  margin-bottom: 15px; }
+.profile .experiences .timeline .timeline-block .content::before {
+  position: absolute;
+  content: "";
+  left: 44%;
+  top: 10px;
+  height: 0;
+  width: 0;
+  border-left: 15px solid #222;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent; }
+.profile .experiences .timeline .timeline-block .content.right::before {
+  content: "";
+  right: 44%;
+  left: inherit;
+  border-right: 15px solid #222;
+  border-left: none; }
+@media (max-width: 992px) {
+  .profile .experiences .timeline .timeline-block .content {
+    width: 100%;
+    margin-top: 63px; }
+  .profile .experiences .timeline .timeline-block .content::before, .profile .experiences .timeline .timeline-block .content.right::before {
+    left: 50%;
+    top: 33px;
+    margin-left: -15px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #222; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,29 @@
+$primary-color: #03a9f4;
+$secondary-color: #eee;
+$skill-bar-primary-color: #0863dd;
+$skill-bar-secondary-color: #b1dcfb;
+
 .profile {
     .row {
         padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .row.sub {
+        background-color: $secondary-color;
     }
 
     .brand-logo {
         padding-left: 20px;
+    }
+
+    .hr-line {
+        height: 3px;
+        width: 100px;
+        background: #333;
+        margin-bottom: 10px;
+        display: inline-block;
+        position: relative;
     }
 
     // personal info
@@ -17,7 +36,6 @@
             padding: 7px;
             box-shadow: 0 7px 10px #999;
         }
-
         .wrapper {
             display: flex;
             flex-direction: column;
@@ -33,29 +51,199 @@
         }
     }
 
-    .hr-line {
-        height: 3px;
-        width: 135px;
-        background: #333;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        display: inline-block;
-        position: relative;
-    }
-
+    // introduce
     .introduce {
         p {
             color: #555;
-            font-weight: 300;
             margin: 0 auto
         }
+
+        .collapsible {
+            margin-top: 30px;
+        }
+
         @media (max-width: 992px) {
             text-align: center;
         }
     }
 
-    .collapsible {
-        margin-top: 30px;
-    }
+    // skill
+   .skill {
+       p{
+           color:#525252;
+           font-size:12px;
+       }
+       .skillbar {
+           position:relative;
+           display:block;
+           margin-bottom:15px;
+           width:100%;
+           background:$skill-bar-secondary-color;
+           height:35px;
+           border-radius:3px;
+           -moz-border-radius:3px;
+           -webkit-border-radius:3px;
+           -webkit-transition:0.4s linear;
+           -moz-transition:0.4s linear;
+           -ms-transition:0.4s linear;
+           -o-transition:0.4s linear;
+           transition:0.4s linear;
+           -webkit-transition-property:width, background-color;
+           -moz-transition-property:width, background-color;
+           -ms-transition-property:width, background-color;
+           -o-transition-property:width, background-color;
+           transition-property:width, background-color;
+       }
+       .skillbar-title {
+           position:absolute;
+           top:0;
+           left:0;
+           width:110px;
+           font-weight:bold;
+           font-size:13px;
+           color:#ffffff;
+           background:$skill-bar-secondary-color;
+           -webkit-border-top-left-radius:3px;
+           -webkit-border-bottom-left-radius:4px;
+           -moz-border-radius-topleft:3px;
+           -moz-border-radius-bottomleft:3px;
+           border-top-left-radius:3px;
+           border-bottom-left-radius:3px;
+       }
+       .skillbar-title span {
+           display:block;
+           background-color: $skill-bar-primary-color;
+           padding:0 20px;
+           height:35px;
+           line-height:35px;
+           -webkit-border-top-left-radius:3px;
+           -webkit-border-bottom-left-radius:3px;
+           -moz-border-radius-topleft:3px;
+           -moz-border-radius-bottomleft:3px;
+           border-top-left-radius:3px;
+           border-bottom-left-radius:3px;
+       }
+       .skillbar-bar {
+           height:35px;
+           width:0px;
+           background-color: $skill-bar-primary-color;
+           border-radius:3px;
+           -moz-border-radius:3px;
+           -webkit-border-radius:3px;
+       }
+       .skill-bar-percent {
+           position:absolute;
+           right:10px;
+           top:0;
+           font-size:11px;
+           height:35px;
+           line-height:35px;
+           color:#ffffff;
+           color:$skill-bar-primary-color;
+       }
+   }
 
+    // experiences
+    .experiences .timeline {
+        position: relative;
+        width: 100%;
+        padding-top: 40px;
+        margin-top: 40px;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .experiences .timeline h4, .experiences .timeline p {
+        color: #fff;
+        font-weight: 300;
+    }
+    .experiences .timeline::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        width: 4px;
+        margin-left: -2px;
+        top: 0;
+        height: 100%;
+        background: #222;
+        border-radius: 2px;
+    }
+    .experiences .timeline .timeline-block {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    .experiences .timeline .timeline-block .icon {
+        background: #222;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        margin-left: -25px;
+        border-radius: 50%;
+    }
+    .experiences .timeline .timeline-block .icon i {
+        color: #fff;
+        font-size: 2rem;
+        line-height: 50px;
+    }
+    .experiences .timeline .timeline-block .content {
+        width: 44%;
+        border: 1px solid #222;
+        padding: 20px;
+        color: #222;
+        background: #222;
+        text-align: left;
+    }
+    .experiences .timeline .timeline-block .content h4 {
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-weight: 800;
+        display: inline-block;
+    }
+    .experiences .timeline .timeline-block .content span.duration {
+        color: #b3b3b3;
+        display: inline-block;
+        margin: 5px;
+    }
+    .experiences .timeline .timeline-block .content span.job-title {
+        font-size: 0.95em;
+        display: block;
+        color: #aaa;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+    .experiences .timeline .timeline-block .content::before {
+        position: absolute;
+        content: "";
+        left: 44%;
+        top: 10px;
+        height: 0;
+        width: 0;
+        border-left: 15px solid #222;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+    }
+    .experiences .timeline .timeline-block .content.right::before {
+        content: "";
+        right: 44%;
+        left: inherit;
+        border-right: 15px solid #222;
+        border-left: none;
+    }
+    @media (max-width: 992px) {
+        .experiences .timeline .timeline-block .content {
+            width: 100%;
+            margin-top: 63px;
+        }
+
+        .experiences .timeline .timeline-block .content::before, .experiences .timeline .timeline-block .content.right::before {
+            left: 50%;
+            top: 33px;
+            margin-left: -15px;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid #222;
+        }
+    }
 }

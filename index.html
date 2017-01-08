@@ -20,25 +20,26 @@
         <nav>
             <div class="nav-wrapper light-blue">
                 <a href="#!" class="brand-logo">Leo Chen</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#personal">基本資料</a></li>
                     <li><a href="#skill">專業技能</a></li>
                     <li><a href="#experiences">經歷</a></li>
                     <li><a href="#portfolio">作品</a></li>
-                    <li><a href="#reference">參考網站</a></li>
-                </ul>
-                <!-- mobile -->
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#personal">基本資料</a></li>
-                    <li><a href="#skill">專業技能</a></li>
-                    <li><a href="#experiences">經歷</a></li>
-                    <li><a href="#portfolio">作品</a></li>
-                    <li><a href="#reference">參考網站</a></li>
+                    <li><a href="#reference">參考資源</a></li>
                 </ul>
             </div>
         </nav>
     </div>
+
+    <!-- mobile menu -->
+    <ul class="side-nav" id="mobile-menu">
+        <li><a href="#personal">基本資料</a></li>
+        <li><a href="#skill">專業技能</a></li>
+        <li><a href="#experiences">經歷</a></li>
+        <li><a href="#portfolio">作品</a></li>
+        <li><a href="#reference">參考資源</a></li>
+    </ul>
 
     <!-- personal -->
     <div class="row scrollspy" id="personal">
@@ -69,7 +70,7 @@
                         哈囉！我是一個網站程式設計師，工作已經超過三年，最熟悉的技術為<b>Java</b>、<b>Groovy</b>、
                         <b>Javascript</b>、<b>Ember.js</b>，也接觸過<b>PHP</b>、<b>ASP.NET</b>，資料庫則用過<b>Oracle</b>、
                         <b>MySQL</b>、<b>PostgreSQL</b>、<b>Redis</b>，作業系統<b>Windows</b>、<b>Linux(macOS)</b>都很熟悉，
-                        也有<b>Git</b>、<b>SVN</b>、<b>Amazon Web Services</b>的使用經驗。目前有著滿腔的熱情，
+                        也有<b>Git</b>、<b>SVN</b>、<b>AWS</b>的使用經驗。目前有著滿腔的熱情，
                         希望能夠找到一個充滿活力的工作環境，一起努力成長！要是真的能夠期待星期一的到來那就更棒了：）
                     </p>
                     <ul class="collapsible popout" data-collapsible="accordion">
@@ -96,8 +97,8 @@
     </div>
 
     <!-- skill -->
-    <div class="row scrollspy sub" id="skill">
-        <div class="col s12 l8 offset-l2 center skill">
+    <div class="row sub scrollspy" id="skill">
+        <div class="col s12 l8 offset-l2 center skill hide" id="skill-area">
             <h3>專業技能</h3>
             <div class="hr-line"></div>
             <div class="skillbar clearfix " data-percent="85%">
@@ -157,8 +158,7 @@
             <div class="hr-line"></div>
             <div class="timeline wow fadeIn" data-wow-duration="0.5s" data-wow-offset="200"
                  style="visibility: visible; animation-duration: 0.5s; animation-name: fadeIn;">
-                <div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="0.5s" data-wow-offset="200"
-                     style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInLeft;">
+                <div class="timeline-block clearfix wow fadeInLeft">
                     <div class="icon">
                         <i class="ion-university"></i>
                     </div>
@@ -168,13 +168,12 @@
                         <span class="job-title"> 學生</span>
                         <p>
                             資訊管理學系畢業，曾自願擔任班代、參加系學會並擔任採編長（負責系刊的編撰），
-                            也拿過系上第一名、畢業成績第三名、專題特優獎、臺北好好玩APP大賽作品入圍、創新商業模式應用大賽入圍決賽等殊榮。
-                            寒暑假則有利用時間去打工，在天泰電腦做過程式設計工讀生、在大宇資訊做過遊戲測試員、以及在宏碁做過程式設計的工讀。
+                            拿過系上第一名、畢業成績第三名、專題特優獎、臺北好好玩APP大賽作品入圍、創新商業模式應用大賽入圍決賽等殊榮。
+                            寒暑假則有利用時間去打工，在宏碁、天泰電腦做過程式設計工讀、在大宇資訊則做過遊戲測試員。
                         </p>
                     </div>
                 </div>
-                <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="0.5s" data-wow-offset="200"
-                     style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInRight;">
+                <div class="timeline-block clearfix wow fadeInRight">
                     <div class="icon">
                         <i class="ion-briefcase"></i>
                     </div>
@@ -183,14 +182,19 @@
                         <span class="duration">( 2013/1 ~ 2015/05 )</span>
                         <span class="job-title"> 資訊專員</span>
                         <p>
-                            在這裡我學到了網站應該要如何從零開始建置，從Tomcat、資料庫伺服器的架設，到網站的撰寫、測試，掛載至伺服器，最後再設定排程來保持伺服器的穩定性，把這些流程全部實際熟悉、操作過後，我具備了自己架設網站的能力。除了網站的建置外，技術上的培養是更加的重要，後端方面我學習了Java的架構（Spring、Struts、Hibernate、Mybatis），並加強將程式元件化的能力，而由於接手了PHP的案子，對LAMP也有一定程度的熟悉，前端則是學會了JQuery、JavaScript、Ajax、Json等好用的技術，為網頁上的控制與效果打下了不少基礎，由於公司網站眾多，接觸了不少不同種類的資料庫，包含Oracle、MySQL、PostgreSQL，也掌握了不少方便的語法如join、decode、when
-                            case等，才知道資料庫原來也可以做許多事情，包含在package裡面寫程式，或是用procedure來做許多複雜的處理。
-                            　　為了處理一些伺服器上的問題，我開始熟悉Windows批次檔的撰寫，不論是要自動開始、結束網站上的活動，或是重啟Tomcat、自動寄信（搭配Java程式）、監控CPU使用率、清除log，寫起來都相當有意思。Linux伺服器也接觸了不少次，在Linux上架伺服器又是另外一種風味，用yum就可以解決大多數的流程，排程的設定則是使用crontab，由於大部分Linux的伺服器都有比較嚴格的權限控管，必須熟悉chmod、chown指令來對檔案做權限和使用者的變更。
+                            在這裡我學到了網站應該要如何從零開始建置，從Tomcat、資料庫伺服器的架設，到網站的撰寫、測試，掛載至伺服器，最後再設定排程來保持伺服器的穩定性，
+                            把這些流程全部實際熟悉、操作過後，我具備了自己架設網站的能力。除了網站的建置外，技術上的培養是更加的重要，後端方面我學習了Java的架構（Spring、Struts、Hibernate、Mybatis），
+                            並加強將程式元件化的能力，而由於接手了PHP的案子，對LAMP也有一定程度的熟悉，前端則是學會了JQuery、JavaScript、Ajax、Json等好用的技術，為網頁上的控制與效果打下了不少基礎，
+                            由於公司網站眾多，接觸了不少不同種類的資料庫，包含Oracle、MySQL、PostgreSQL，也掌握了不少方便的語法如join、decode、when case等，才知道資料庫原來也可以做許多事情，
+                            包含在package裡面寫程式，或是用procedure來做許多複雜的處理。
+                            <br/><br/>
+                            為了處理一些伺服器上的問題，我開始熟悉Windows批次檔的撰寫，不論是要自動開始、結束網站上的活動排程，或是重啟Tomcat、自動寄信（搭配Java程式）、監控CPU使用率、清除過期log，寫起來都相當有意思。
+                            Linux伺服器也接觸了不少次，在Linux上架伺服器又是另外一種風味，用yum就可以解決大多數的流程，排程的設定則是使用crontab，由於大部分Linux的伺服器都有比較嚴格的權限控管，
+                            必須熟悉chmod、chown指令來對檔案做權限和使用者的變更。
                         </p>
                     </div>
                 </div>
-                <div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="0.5s" data-wow-offset="200"
-                     style="visibility: visible; animation-duration: 0.5s; animation-name: fadeInLeft;">
+                <div class="timeline-block clearfix wow fadeInLeft">
                     <div class="icon">
                         <i class="ion-university"></i>
                     </div>
@@ -199,7 +203,10 @@
                         <span class="duration">( 2015/06 ~ 現今 )</span>
                         <span class="job-title"> 資訊專員</span>
                         <p>
-
+                            這間公司用了相當多以前沒有接觸過，對我來說是相當新的技術，像是後端的Groovy語言、Grails架構，用來編譯的Maven、Gradle，
+                            寫前端的Ember.js，雲端的AWS服務，佈署網站用的Jenkins，資料庫Redis，還有做資料庫migration的相關技術如flyway、Grails Database Migration Plugin
+                            都讓我大開眼界，另外利用<a href="//trello.com/" target="_blank">Trello</a>來做任務導向式的工作分配，自主的進度管理，都有相當高的靈活性，
+                            使我對需求的規劃、時程的計算更有概念。
                         </p>
                     </div>
                 </div>
@@ -219,10 +226,10 @@
 
     <!-- reference -->
     <div class="row scrollspy" id="reference">
-        <div class="col s12 l8 offset-l2 center">
-            <h3>參考網站</h3>
+        <div class="col s12 l8 offset-l2 center" >
+            <h3>參考資源</h3>
             <div class="hr-line"></div>
-            <br/>製作敝網站時所參考的網站：<br/>
+            <br/>製作敝網站時所參考的資源：<br/>
             <ul>
                 <li><a href="http://materializecss.com" target="_blank">Materialize</a></li>
                 <li><a href="http://www.marqa-portfolio.eb2a.com" target="_blank">Profile Template</a></li>
@@ -238,47 +245,42 @@
 
 <script>
     jQuery(document).ready(function () {
-        // skill bar animation
-        jQuery('.skillbar').each(function () {
-            jQuery(this).find('.skillbar-bar').animate({
-                width: jQuery(this).attr('data-percent')
-            }, 2500);
-        });
-
-        // counter animation
-        $('.count').each(function () {
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 2500,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        });
-
         // scrollFire  animation
+        var animatedMS = 2500;
         var options = [
-            {selector: '#staggered-test', offset: 50, callback: function(el) {
-                Materialize.toast("This is our ScrollFire Demo!", 1500 );
-            } },
-            {selector: '#staggered-test', offset: 205, callback: function(el) {
-                Materialize.toast("Please continue scrolling!", 1500 );
-            } },
-            {selector: '#staggered-test', offset: 400, callback: function(el) {
-                Materialize.showStaggeredList($(el));
-            } },
-            {selector: '#image-test', offset: 500, callback: function(el) {
+            {selector: '#skill-area', offset: 500, callback: function(el) {
+                $(el).removeClass('hide');
                 Materialize.fadeInImage($(el));
+
+                // skill bar animation
+                jQuery('.skillbar').each(function () {
+                    jQuery(this).find('.skillbar-bar').animate({
+                        width: jQuery(this).attr('data-percent')
+                    }, animatedMS);
+                });
+
+                // counter animation
+                $('.count').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: animatedMS,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
             } }
         ];
-        Materialize.scrollFire(options);
+         Materialize.scrollFire(options);
 
         // scrollspy animation
-        $(document).ready(function () {
+        if ($( window ).width() >= 992) {
             $('.scrollspy').scrollSpy({scrollOffset: 64});
-        });
+        } else {
+            $('.scrollspy').scrollSpy({scrollOffset: 56});
+        }
 
         // button collapse
         $(".button-collapse").sideNav();
